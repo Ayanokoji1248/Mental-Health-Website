@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="test.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="main">
+
+        <h1>Mental Health Test</h1>
+
+        <div class="how">
+
+            <h3>How it works</h3>
+            <p>A mental health test is an evaluation tool that assesses an individual's psychological well-being. It typically involves questions and exercises designed to gauge mood, stress, coping strategies, and overall mental resilience. The results guide mental health professionals in identifying issues and tailoring support and treatment, with a focus on patient comfort and confidentiality.</p>
+        </div>
+            
+        <div class="rating">
+
+            <h3>How rating works</h3>
+            <p><strong>(0 = not at all, 10 = every day)</strong></p>
+        </div>
+
+        <form action="/userTest" method="post">
+            
+            <!-- Anxiety -->
+            <label for="q1">How often do you feel worried or nervous about things?</label>
+            <input type="number" id="q1" name="q1" min="0" max="10" required placeholder="0">
+
+            <label for="q2">How hard is it for you to relax when you're feeling anxious?</label>
+            <input type="number" id="q2" name="q2" min="0" max="10" required placeholder="0">
+
+            <label for="q3">How often do you have physical symptoms like a racing heart or upset stomach when you're worried?</label>
+            <input type="number" id="q3" name="q3" min="0" max="10" required placeholder="0">
+
+            <!-- OCD -->
+            <label for="q4">How often do you have thoughts or worries that keep coming back and won't go away, even when you try to ignore them?</label>
+            <input type="number" id="q4" name="q4" min="0" max="10" required placeholder="0">
+
+            <label for="q5">How often do you feel like you have to do certain things (like counting, touching, or checking) to make your worries or bad thoughts go away?</label>
+            <input type="number" id="q5" name="q5" min="0" max="10" required placeholder="0">
+
+            <label for="q6">How much do these thoughts and behaviors interfere with your daily life, such as school, friendships, or family activities?</label>
+            <input type="number" id="q6" name="q6" min="0" max="10" required placeholder="0">
+
+            <!-- Schiznopheria -->
+            <label for="q7">How often do you hear or see things that others can't hear or see?</label>
+            <input type="number" id="q7" name="q7" min="0" max="10" required placeholder="0">
+
+            <label for="q8">How often do you have thoughts or beliefs that don't make sense or seem unusual to you?</label>
+            <input type="number" id="q8" name="q8" min="0" max="10" required placeholder="0">
+
+            <label for="q9">How much do these experiences, like hearing voices or unusual thoughts, interfere with your daily life, such as your ability to go to school, make friends, or participate in activities?</label>
+            <input type="number" id="q9" name="q9" min="0" max="10" required placeholder="0">
+
+
+            <!-- Bipolar -->
+            <label for="q10">How often do you experience extreme mood swings, such as feeling very happy and energetic one moment and very sad or irritable the next?</label>
+            <input type="number" id="q10" name="q10" min="0" max="10" required placeholder="0">
+
+            <label for="q11">How much do these mood swings affect your ability to do things like schoolwork, spending time with friends, or participating in activities?</label>
+            <input type="number" id="q11" name="q11" min="0" max="10" required placeholder="0">
+
+            <label for="q12">How often do you have difficulty sleeping, either by sleeping too little or too much when your mood changes?</label>
+            <input type="number" id="q12" name="q12" min="0" max="10" required placeholder="0">
+
+
+            <!-- Depression -->
+            <label for="q13">How often do you feel really sad or down?</label>
+            <input type="number" id="q13" name="q13" min="0" max="10" required placeholder="0">
+
+            <label for="q14">How often do you feel really sad or down?</label>
+            <input type="number" id="q14" name="q14" min="0" max="10" required placeholder="0">
+
+            <label for="q15">How often do you feel tired or without energy?</label>
+            <input type="number" id="q15" name="q15" min="0" max="10" required placeholder="0">
+
+            <button type="button" id="startTestButton">Submit</button>
+
+        </form>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const startTestButton = document.getElementById("startTestButton");
+            const mentalHealthForm = document.getElementById("mentalHealthForm");
+            const outputDiv = document.getElementById("output");
+
+            startTestButton.addEventListener("click", function () {
+                outputDiv.innerHTML = ""; // Clear previous output
+
+                // Calculate the total score based on user responses
+                const q1 = parseInt(document.getElementById("q1").value);
+                const q2 = parseInt(document.getElementById("q2").value);
+                const q3 = parseInt(document.getElementById("q3").value);
+                const q4 = parseInt(document.getElementById("q4").value);
+                const q5 = parseInt(document.getElementById("q5").value);
+                const q6 = parseInt(document.getElementById("q6").value);
+                const q7 = parseInt(document.getElementById("q7").value);
+                const q8 = parseInt(document.getElementById("q8").value);
+                const q9 = parseInt(document.getElementById("q9").value);
+                const q10 = parseInt(document.getElementById("q10").value);
+                const q11 = parseInt(document.getElementById("q11").value);
+                const q12 = parseInt(document.getElementById("q12").value);
+                const q13 = parseInt(document.getElementById("q13").value);
+                const q14 = parseInt(document.getElementById("q14").value);
+                const q15 = parseInt(document.getElementById("q15").value);
+
+                // Add more questions and scores as needed
+                const anxiety = q1 + q2 + q3;
+                const depression = q13 + q14 + q15;
+                const bipolar = q10 + q11 + q12;
+                const Schizopheneria = q7 + q8 + q9;
+                const ocd = q4 + q5 + q6;
+
+                console.log("anxiety: "+anxiety);
+                console.log("ocd: "+ocd);
+                console.log("depression: "+depression);
+                console.log("Scgdsf"+Schizopheneria);
+                console.log("biplar"+bipolar);
+
+                // Determine the mental health condition based on the total score
+                let mentalHealthCondition;// = "Normal";
+
+                if (anxiety < 15 && depression < 15 && bipolar < 15 && Schizopheneria < 15 && ocd < 15) {
+                    mentalHealthCondition = "Normal"
+                    outputDiv.innerHTML = `<h2>Mental Health Condition: ${mentalHealthCondition}</h2>`;
+                }
+
+                // Display the result on the webpage
+                //                outputDiv.innerHTML = `<h2>Mental Health Condition: ${mentalHealthCondition}</h2>`;
+
+                // You can provide additional information or resources based on the condition
+                if (mentalHealthCondition != "Normal") {
+
+                    outputDiv.innerHTML = `<h2>Mental Health Condition: </h2>`;
+                    if(anxiety>=20){
+                        
+                        outputDiv.innerHTML += `<h3>Anxiety </h3>`;
+                        outputDiv.innerHTML += "<p>Symptoms may include excessive worry, restlessness, irritability, difficulty concentrating, and physical symptoms such as sweating or trembling. To help reduce anxiety, individuals may benefit from therapy, medication, mindfulness techniques such as meditation or deep breathing exercises, regular exercise, and limiting caffeine and alcohol intake.</p>";
+                    }
+                    
+                    if(depression>=20){
+                        outputDiv.innerHTML += `<h3>Depression </h3>`;
+                        outputDiv.innerHTML += "<p>Symptoms may include persistent sadness, loss of interest in activities, feelings of hopelessness or worthlessness, sleep disturbances, fatigue, changes in appetite, and difficulty concentrating. To help reduce depression, individuals may benefit from therapy, medication, regular exercise, a healthy diet, and social support.</p>";
+                    }
+                    
+                    if(ocd>=20){
+                        outputDiv.innerHTML += `<h3>Obsessive-compulsive disorder (OCD) </h3>`;
+                        outputDiv.innerHTML += "<p>Symptoms may include intrusive, repetitive thoughts or urges (obsessions) that lead to compulsive behaviors or actions. To help reduce OCD symptoms, individuals may benefit from therapy, medication, and exposure and response prevention (ERP) techniques that gradually expose them to feared situations without engaging in compulsive behaviors.</p>";
+                    }
+                    
+                    if(Schizopheneria>=20){
+                        
+                        outputDiv.innerHTML += `<h3>Schizopheneria </h3>`;
+                        outputDiv.innerHTML += "<p>Symptoms may include delusions, hallucinations, disordered thinking, and social withdrawal. To help reduce schizophrenia symptoms, individuals may benefit from medication, therapy, and support from family and friends.</p>";
+                    }
+                    
+                    if(bipolar>=20){
+                        
+                        outputDiv.innerHTML += `<h3>Bipolar Disorder </h3>`;
+                        outputDiv.innerHTML += "<p>Bipolar disorder: Symptoms may include mood swings between periods of high energy (mania) and periods of depression. To help reduce bipolar symptoms, individuals may benefit from therapy, medication, and developing a regular routine for sleep and exercise.</p>";
+                    }
+                    
+
+                    // outputDiv.innerHTML = `<h2>Mental Health Condition: </h2>`;
+                    // if (anxiety >= 27) {
+                    //     outputDiv.innerHTML += `<h3>Anxiety </h3>`;
+                    //     outputDiv.innerHTML += "<p>Symptoms may include excessive worry, restlessness, irritability, difficulty concentrating, and physical symptoms such as sweating or trembling. To help reduce anxiety, individuals may benefit from therapy, medication, mindfulness techniques such as meditation or deep breathing exercises, regular exercise, and limiting caffeine and alcohol intake.</p>";
+                    // }
+                    // if (depression >= 27) {
+                    //     outputDiv.innerHTML += `<h3>Depression </h3>`;
+                    //     outputDiv.innerHTML += "<p>Symptoms may include persistent sadness, loss of interest in activities, feelings of hopelessness or worthlessness, sleep disturbances, fatigue, changes in appetite, and difficulty concentrating. To help reduce depression, individuals may benefit from therapy, medication, regular exercise, a healthy diet, and social support.</p>";
+                    // }
+                    // if (Schizopheneria >= 27) {
+                    //     outputDiv.innerHTML += `<h3>Schizopheneria </h3>`;
+                    //     outputDiv.innerHTML += "<p>Symptoms may include delusions, hallucinations, disordered thinking, and social withdrawal. To help reduce schizophrenia symptoms, individuals may benefit from medication, therapy, and support from family and friends.</p>";
+                    // }
+                    // if (bipolar >= 27) {
+                    //     outputDiv.innerHTML += `<h3>Bipolar Disorder </h3>`;
+                    //     outputDiv.innerHTML += "<p>Bipolar disorder: Symptoms may include mood swings between periods of high energy (mania) and periods of depression. To help reduce bipolar symptoms, individuals may benefit from therapy, medication, and developing a regular routine for sleep and exercise.</p>";
+                    // }
+                    // if (ocd >= 27) {
+                    //     outputDiv.innerHTML += `<h3>Obsessive-compulsive disorder (OCD) </h3>`;
+                    //     outputDiv.innerHTML += "<p>Symptoms may include intrusive, repetitive thoughts or urges (obsessions) that lead to compulsive behaviors or actions. To help reduce OCD symptoms, individuals may benefit from therapy, medication, and exposure and response prevention (ERP) techniques that gradually expose them to feared situations without engaging in compulsive behaviors.</p>";
+                    // }
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

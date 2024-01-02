@@ -1,0 +1,121 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>   
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+Body {  
+    font-family: 'Montserrat Alternates', sans-serif;
+  /* font-family: Calibri, Helvetica, sans-serif;   */
+  background-color: beige;  
+  height: 100%;
+}  
+
+.container{
+    /* width: 50%; */
+}
+
+h1{
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+
+button {   
+       background-color: #4CAF50;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        /* border: 3px solid #f1f1f1;    */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+    label{
+        font-size: 30px;
+    }
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    } 
+    input{
+        font-size: 25px;
+    } 
+    button{
+        background-color: #ffc85b;
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        border-radius: 15px;
+    }
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: white;  
+        height: 530px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 20px;
+    }   
+</style>   
+</head>    
+<body>    
+    <center> <h1>Sign-In Form </h1> </center>   
+    <form action="/userStore" method="POST">  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <button type="submit" id="login">Sign-In</button>   
+             
+        </div>   
+    </form>  
+<!-- 
+    <script>
+        // Get a reference to the button element
+        var redirectButton = document.getElementById("login");
+
+        // Add a click event listener to the button
+        redirectButton.addEventListener("click", function() {
+            // Redirect to the desired URL when the button is clicked
+            window.location.href = "test.html"; // Replace with the URL you want to redirect to
+        });
+    </script>    -->
+</body>     
+</html>  

@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: beige;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    /* border-bottom:10px solid #FFD47D; */
+}
+
+.left-nav img{
+    width: 80px;
+}
+
+.right-nav{
+    width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    /* margin-right: 50px; */
+}
+
+.right-nav h3{
+    font-size: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+}
+.right-nav button{
+    font-size: 22px;
+    padding: 15px 40px;
+    background-color:white ;
+    border: 3px solid #cbc942;
+    border-radius: 2pc;
+    font-weight: 600;
+}
+.right-nav button:hover{
+    cursor: pointer;
+}
+
+#main{
+    width: 100%;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-page1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:flex-end; */
+    gap: 30px;
+    padding-left: 30px;
+    padding-top: 40px;
+    /* justify-content: space-evenly; */
+    
+}
+
+.left-page1 h1{
+    font-family: 'Hahmlet', serif;
+    font-size: 100px;
+    line-height: 100px;
+}
+.left-page1 p{
+    font-size: 26px;
+    width: 95%;
+}
+.left-page1 button{
+    font-family: 'Hahmlet', serif;
+    width: 250px;
+    font-size: 28px;
+    padding:12px 0px;
+    font-weight: 600;
+    /* margin-top: 15px; */
+    border-radius: 10px;
+    background-color: white ;
+    transition: transform 0.3s ease-in-out;
+}
+.left-page1 button:hover{
+    cursor: pointer;
+    transform: translateY(-.2em);
+    box-shadow: 4px 4px 2px 2px #FFD47D;
+}
+
+.right-page1{
+    width: 50%;
+    height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.right-page1 img{
+    width:700px;
+}
+
+
+#page2{
+    width: 100%;
+    height: 50vh;
+    background-color: #FFD47D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    
+}
+
+#page2 h1{
+    font-size: 80px;
+    width: 50%;
+    /* color: #fdffbc; */
+}
+#page2 p{
+    /* color: #fdffbc; */
+    font-size: 30px;
+    font-weight: 500;
+    width: 50%;
+}
+
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #F5F5DC;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    
+    
+}
+
+#page3 h1{
+    font-size: 100px;
+    font-family: 'Hahmlet', serif;
+}
+#page3 p{
+    font-size: 30px;
+    width: 80%;
+    text-align: center;
+    font-weight: 500;
+}
+
+#page3 button{
+    font-size: 40px;
+    padding: 15px 50px;
+    margin-top: 30px;
+    font-weight: 600;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+#page3 button:hover{
+    cursor: pointer;
+    transform: translateY(-.2em);
+    box-shadow: 4px 4px 2px 2px #FFD47D;
+}
+
+#page4{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/toyBack.jpg);
+    background-position: center;
+    background-size: cover;
+    /* background-position-y:-160px; */
+}
+#page4 .overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h1{
+    font-size: 65px;
+    color: white;
+}
+
+
+#page5{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left-page5{
+    width: 50%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.left-page5 h1{
+    font-size: 80px;
+    font-family: 'Hahmlet', serif;
+}
+.left-page5 p{
+    font-size: 28px;
+    padding: 5px 20px;
+    padding-left: 40px;
+}
+
+
+.right-page5{
+    width: 50%;
+    /* border: 2px solid teal; */
+    /* background-image: url(aboutUs.jpg);
+    background-position: center;
+    background-size: cover;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-page5 img{
+    width: 550px;
+}
+
+#page6{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(contact.jpg);
+    background-position: center;
+    background-size: cover; */
+    background-color: beige;
+    display: flex;
+}
+
+.left-page6{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEF9F5;
+    /* border: 2px solid red; */
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.left-page6{
+    width: 50%;
+    display: flex;
+
+}
+
+.left-page6 img{
+    width: 650px;
+    border-radius: 100px;
+}
+
+.right-page6{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #FEF9F5;
+}
+
+.right-page6 h1{
+    font-size: 100px;
+    /* margin-top: 50px; */
+}
+
+.right-page6 form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+form input{
+    width: 550px;
+    font-size: 35px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #cbc942;
+    outline: none;
+}
+
+form input::placeholder{
+    font-size: 25px;
+}
+
+form button{
+    font-size: 40px;
+    padding: 10px 60px;
+    margin-top: 35px;
+    background-color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+form button:hover{
+    cursor: pointer;
+    transform: translateY(-.2em);
+    box-shadow: 4px 4px 2px 2px #FFD47D;
+}

@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Hahmlet', serif;
+}
+
+#main h1{
+    font-size: 100px;
+    text-align: center;
+    color:#ffc85b;
+    text-decoration:underline;
+    /* color:yellow; */
+    position: relative;
+    z-index: 9;
+}
+
+#main h1::before{
+    content: "Mental Health Test";
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    left: 272px;
+    color: rgb(0, 0, 0);
+    color: #b8bc45;
+    /* -webkit-text-stroke: 2px white; */
+}
+
+#main .how{
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#main .how h3{
+    font-size: 40px;
+    /* color: #ffcc66; */
+}
+
+#main .how p{
+    font-size: 22px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+}
+
+#main .rating{
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#main .rating h3{
+    font-size: 40px;
+}
+
+#main .rating p{
+    font-size: 25px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* text-decoration:solid; */
+}
+
+#main form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+#main form label{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#main form input{
+    width: 70px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    border-radius: 3pc;
+    border:none;
+    background-color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+form button{
+    width: 250px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 40px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
+}
+
+form button:hover{
+    cursor: pointer;
+    transform: translateY(-.2em);
+    box-shadow: 4px 4px 2px 2px #ffc85b;
+}
